@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vashua Saeed — Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #fffdf9;
+      color: #351900;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 6%;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 80px;
+    }
+
+    .hero {
+      height: calc(100vh - 100px);
+      display: flex;
+      align-items: flex-end;
+      padding: 0 6% 70px;
+    }
+
+    .name {
+      font-size: clamp(70px, 11vw, 180px);
+      line-height: 0.75;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>VASHUA SAEED</h1>
+
+  <nav>
+    <div>WORK</div>
+
+    <div class="nav-right">
+      <div>PLAY</div>
+      <div>ABOUT</div>
+      <div>CONTACT</div>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <h1 class="name">
+      VASHUA<br>
+      SAEED
+    </h1>
+  </main>
+
 </body>
 </html>
