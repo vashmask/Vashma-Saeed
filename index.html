@@ -3,48 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vashma Saeed | Portfolio</title>
 
-  <title>Vashua Saeed — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #fffdf9;
-      color: #351900;
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
+      background: #fffefa;
+      color: #402c16;
+      font-family: 'Playfair Display', Georgia, serif;
     }
 
+    /* NAVIGATION */
     nav {
+      width: 100%;
+      padding: 20px 4.5%;
       display: flex;
       justify-content: space-between;
-      padding: 40px 6%;
-      font-size: 24px;
-      font-weight: bold;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
     }
 
-    .nav-right {
-      display: flex;
-      gap: 80px;
+    nav a {
+      color: #402c16;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      transition: color 0.3s ease;
     }
 
+    nav a:hover {
+      color: #e99db2;
+    }
+
+    /* LANDING PAGE */
     .hero {
-      height: calc(100vh - 100px);
-      display: flex;
-      align-items: flex-end;
-      padding: 0 6% 70px;
+      height: 100vh;
+      min-height: 550px;
+      position: relative;
+      overflow: hidden;
+      background: #fffefa;
     }
 
-    .name {
-      font-size: clamp(70px, 11vw, 180px);
-      line-height: 0.75;
-      font-weight: 900;
-      letter-spacing: -0.08em;
+    h1 {
+      position: absolute;
+      top: 36%;
+      left: 4.5%;
+      z-index: 2;
+      color: #efa3b6;
+      font-family: 'DM Serif Display', 'Bodoni MT', Georgia, serif;
+      font-size: clamp(70px, 11.8vw, 120px);
+      font-weight: 400;
+      line-height: 0.91;
+      letter-spacing: -5px;
+    }
+
+    /* POND */
+    .pond {
+      position: absolute;
+      bottom: -45px;
+      right: -30px;
+      width: 75%;
+      height: 220px;
+    }
+
+    .pond path {
+      fill: none;
+      stroke: #e2f0ff;
+      stroke-width: 7;
+      stroke-linecap: round;
+    }
+
+    /* WATER LILIES */
+    .flower {
+      position: absolute;
+      z-index: 3;
+      font-size: 65px;
+      line-height: 1;
+      filter: saturate(0.85);
+    }
+
+    .flower-left {
+      left: 30%;
+      bottom: -5px;
+      transform: rotate(-8deg);
+    }
+
+    .flower-right {
+      right: 3%;
+      bottom: 100px;
+      font-size: 75px;
+      transform: rotate(8deg);
+    }
+
+    .flower-bud {
+      right: 13%;
+      bottom: 175px;
+      font-size: 48px;
+      transform: rotate(-10deg);
+    }
+
+    /* CONTENT SECTIONS */
+    section.content {
+      padding: 110px 8%;
+      min-height: 65vh;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #bc7187;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    section.content h2 {
+      color: #efa3b6;
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(45px, 7vw, 75px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+    }
+
+    section.content p:not(.eyebrow) {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 650px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: #402c16;
+      text-underline-offset: 5px;
+      text-decoration-color: #efa3b6;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 5%;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #402c16;
+      text-decoration: none;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav {
+        padding: 20px 5%;
+      }
+
+      nav a {
+        font-size: 11px;
+      }
+
+      h1 {
+        top: 34%;
+        left: 5%;
+        font-size: 18vw;
+        letter-spacing: -3px;
+      }
+
+      .pond {
+        width: 110%;
+        right: -25%;
+        bottom: 10px;
+        height: 180px;
+      }
+
+      .flower-left {
+        left: 15%;
+      }
+
+      .flower-right {
+        right: 5%;
+        bottom: 75px;
+      }
+
+      .flower-bud {
+        right: 20%;
+        bottom: 145px;
+      }
+
+      section.content {
+        padding: 80px 7%;
+      }
+
+      section.content p:not(.eyebrow) {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -52,21 +219,89 @@
 <body>
 
   <nav>
-    <div>WORK</div>
-
-    <div class="nav-right">
-      <div>PLAY</div>
-      <div>ABOUT</div>
-      <div>CONTACT</div>
-    </div>
+    <a href="#about">ABOUT</a>
+    <a href="#work">WORK</a>
+    <a href="#play">PLAY</a>
+    <a href="#contact">CONTACT</a>
   </nav>
 
-  <main class="hero">
-    <h1 class="name">
-      VASHUA<br>
-      SAEED
-    </h1>
+  <main>
+    <div class="hero" id="home">
+
+      <h1>VASHMA<br>SAEED</h1>
+
+      <!-- Pale blue pond lines -->
+      <svg class="pond" viewBox="0 0 800 220"
+           preserveAspectRatio="none"
+           aria-hidden="true">
+
+        <path d="M-20 100 C70 20 220 10 390 20 S720 20 810 80 C880 125 710 180 560 190 S240 190 180 145 C120 100 220 65 370 65 S590 90 570 125 C550 160 390 160 330 130 C280 105 350 85 420 95 C480 105 470 125 420 125"/>
+
+        <path d="M-20 120 C80 45 230 35 390 42 S700 42 770 85 C830 120 690 160 550 170 S260 170 210 140 C170 115 240 80 370 85 S550 100 540 125 C525 145 410 145 360 125 C325 110 365 100 420 110"/>
+
+        <path d="M-20 145 C100 70 240 60 390 65 S670 65 730 95 C775 120 665 140 540 150 S290 150 245 130 C210 115 270 100 370 105 S515 115 500 130"/>
+
+        <path d="M-20 170 C100 95 250 85 390 90 S630 85 680 105 C720 120 630 130 530 135 S320 135 280 120 C255 110 310 110 380 115"/>
+
+      </svg>
+
+      <!-- Decorative flowers -->
+      <div class="flower flower-left">🪷</div>
+      <div class="flower flower-right">🪷</div>
+      <div class="flower flower-bud">🌷</div>
+
+    </div>
+
+    <section class="content" id="about">
+      <div class="eyebrow">ABOUT ME</div>
+      <h2>A little about me.</h2>
+      <p>
+        Hi, I'm Vashma! I'm a design student interested in visual
+        communication, creative experimentation, and making
+        thoughtful designs that connect with people.
+      </p>
+    </section>
+
+    <section class="content" id="work">
+      <div class="eyebrow">SELECTED PROJECTS</div>
+      <h2>My work.</h2>
+      <p>
+        A collection of my graphic design, visual communication,
+        and interactive design projects. More projects coming soon.
+      </p>
+    </section>
+
+    <section class="content" id="play">
+      <div class="eyebrow">JUST FOR FUN</div>
+      <h2>Room to play.</h2>
+      <p>
+        Experiments, little ideas, sketches, and creative things
+        made simply for the joy of making.
+      </p>
+    </section>
+
+    <section class="content" id="contact">
+      <div class="eyebrow">GET IN TOUCH</div>
+      <h2>Let's connect.</h2>
+      <p>
+        Have a project or just want to say hello?
+      </p>
+      <a class="contact-link"
+         href="mailto:YOUR-EMAIL@example.com">
+        YOUR-EMAIL@example.com ↗
+      </a>
+    </section>
   </main>
+
+  <footer>
+    <span>© <span id="year"></span> Vashma Saeed</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
